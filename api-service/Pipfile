@@ -1,0 +1,25 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+google-auth = "*"
+google-cloud-storage = "*"
+torch = "*"
+uvicorn = "*"
+fastapi = "*"
+transformers = "*"
+pandas = "*"
+numpy = "*"
+keras-preprocessing = "*"
+scikit-learn = "*"
+httpie = "*"
+
+[requires]
+python_version = "3.8"
+
+[pipenv]
+allow_prereleases = true
