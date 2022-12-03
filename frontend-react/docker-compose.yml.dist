@@ -1,0 +1,26 @@
+version: "2"
+
+services:
+  app:
+    container_name: 220vsearch_frontend
+    build: ./docker/php
+    working_dir: /app
+    volumes:
+      - /Users/antonshell/Projects/220v_search_frontend:/app
+    ports:
+      - 8096:8080
+    #environment:
+    #  XDEBUG_CONFIG: "idekey=PHPSTORM remote_enable=On remote_connect_back=On"
+    environment:
+      PHP_TIMEZONE: Europe\Moscow
+      PHP_IDE_CONFIG: "serverName=_ANTONSHELL"
+  nginx:
+    container_name: 220vsearch_frontend
+    image: nginx:1.12-alpine
+    ports:
+      - 8095:80
+    volumes:
+      - /Users/antonshell/Projects/220v_search_frontend:/app
+      - ./docker/nginx/vhost.conf:/etc/nginx/conf.d/vhost.conf
+    depends_on:
+      - app
