@@ -61,7 +61,7 @@ echo '<___Provided Json Key___>' > secrets/bucket-reader.json
 
 ### Create Docker network
 ```
-sudo docker network create mushroom-app
+sudo docker network create sse-app
 ```
 
 ### Run api-service
@@ -73,12 +73,12 @@ sudo docker run -d --name api-service \
 -p 9000:9000 \
 -e GOOGLE_APPLICATION_CREDENTIALS=/secrets/bucket-reader.json \
 -e GCP_PROJECT=ai5-project \
--e GCP_ZONE=us-central1-a --network mushroom-app amanjolly1994/sse-api-server:latest
+-e GCP_ZONE=us-central1-a --network sse-app amanjolly1994/sse-api-server:latest
 ```
 
 If you want to run in interactive mode like we id in development:
 ```
-sudo docker run --rm -ti --name api-service --mount type=bind,source="$(pwd)/persistent-folder/",target=/persistent --mount type=bind,source="$(pwd)/secrets/",target=/secrets -p 9000:9000 -e GOOGLE_APPLICATION_CREDENTIALS=/secrets/bucket-reader.json -e GCP_PROJECT=ai5-project -e GCP_ZONE=us-central1-a -e DEV=1 --network mushroom-app amanjolly1994/sse-api-server:latest
+sudo docker run --rm -ti --name api-service --mount type=bind,source="$(pwd)/persistent-folder/",target=/persistent --mount type=bind,source="$(pwd)/secrets/",target=/secrets -p 9000:9000 -e GOOGLE_APPLICATION_CREDENTIALS=/secrets/bucket-reader.json -e GCP_PROJECT=ai5-project -e GCP_ZONE=us-central1-a -e DEV=1 --network sse-app amanjolly1994/sse-api-server:latest
 ```
 
 ### Run frontend
