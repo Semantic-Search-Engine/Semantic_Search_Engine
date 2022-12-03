@@ -17,6 +17,7 @@ Medium Article link : https://medium.com/@fuzzymark1221/creating-an-ai-powered-s
 
 # Images on docker hub : 
 api-services :amanjolly1994/sse-api-server:latest
+
 frontend-react-app: amanjolly1994/sse-frontend-react-v1:latest
 
 ## Running Docker Containers on VM
