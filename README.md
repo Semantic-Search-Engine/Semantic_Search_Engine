@@ -9,7 +9,7 @@ frontend-react conatins the files relating the react app for QHunt
 
 api-services has the backend part of the code 
 
-Presentaion link : https://docs.google.com/presentation/d/1HT64rewraCcdUnWyvN19qVINRYuxdQHPmnjP-qumM1E/edit?usp=share_link
+Presentaion link : https://docs.google.com/presentation/d/1HT64rewraCcdUnWyvN19qVINRYuxdQHPmnjP-qumM1E/edit?usp=share_link , https://prezi.com/view/rT4oRmfCjLpChGceaiXL/
 
 Medium Article link : https://medium.com/@fuzzymark1221/creating-an-ai-powered-semantic-search-engine-ea82fe9de8e7
 
